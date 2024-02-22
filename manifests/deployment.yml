@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mikeduvallpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mikeduvallpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: mikeduvallpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: mikeduvallpipelinesjavascriptdocker 
+          image: duvallmycontainerregistry.azurecr.io/mikeduvallpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
